@@ -1,45 +1,34 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import Header from "./components/Header";
+import SectionFour from "./components/SectionFour";
+import SectionOne from "./components/SectionOne";
+import SectionThree from "./components/SectionThree";
+import SectionTwo from "./components/SectionTwo";
+import logo from './assets/img/logo-xbox.svg'
+import "./styles/App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
+      <Header />
+      <main>
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+      </main>
+      <footer>
+        <div className="content">
+          <a href="#">
+          <img src={logo} alt="Logo Xbox" />
           </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+          <div className="rightFooter">
+            <span>© Microsoft 2022</span>
+            <span>Todos os direitos reservados</span>
+          </div>
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
