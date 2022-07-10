@@ -3,7 +3,8 @@ import SectionFour from "./components/SectionFour";
 import SectionOne from "./components/SectionOne";
 import SectionThree from "./components/SectionThree";
 import SectionTwo from "./components/SectionTwo";
-import logo from './assets/img/logo-xbox.svg'
+import logoP from './assets/img/logo-xboxP.svg'
+import logoG from './assets/img/logo-xboxG.svg'
 import "./styles/App.css";
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
       <footer>
         <div className="content">
           <a href="#">
-          <img src={logo} alt="Logo Xbox" />
+          <picture>
+          <source media="(min-width: 820px)" srcSet={logoG} />
+          <img src={logoP} alt="Logo Xbox" />
+        </picture>
           </a>
           <div className="rightFooter">
             <span>© Microsoft 2022</span>

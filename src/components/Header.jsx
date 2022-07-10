@@ -1,11 +1,14 @@
 import React from 'react'
-import logo from '../assets/img/logo-xbox.svg'
-
+import logoP from '../assets/img/logo-xboxP.svg'
+import logoG from '../assets/img/logo-xboxG.svg'
 export default function Header() {
   return (
    <header>
       <a href="#" className="logo">
-        <img src={logo} alt="Logo Xbox" />
+        <picture>
+          <source media="(min-width: 820px)" srcSet={logoG} />
+          <img src={logoP} alt="Logo Xbox" />
+        </picture>
       </a>
       <nav>
         <ul>
